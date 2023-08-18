@@ -1,50 +1,34 @@
 print('1. Programa que pida al usuario una letra del abecedario,verifique si el caracter es vocal o consonante.')
 print('2. Programa que calcule el cobro de un estacionamiento.')
 print('3. Programa que solicite tres longitudes y determine si se puede hacer o no un triangulo.')
-N=int(input('Con numeros elige la opcion que quieres ejecutar: 1/2/3 '))
+N=int(input('Con numeros elige la opcion que quieres ejecutar: 1/2/3 : '))
 if N==1:
-    I=[]
-    n=int(input('ingrese un número entero positivo que desee: '))
-    if n>0:
-        i=1
-        while i<=n:
-            r=i%2
-            if r==1:
-                I.append(i)
-            i+=1
-        print('Los numeros inpares hasta ',n,' son: ',I)
+    a=input('Ingrese un aletra del abecedario: ')
+    if a.upper() == 'A' or a.upper() == 'E' or a.upper() == 'I' or a.upper() == 'O' or a.upper() == 'U' :
+        print('La letras es una vocal.')
     else:
-        print('el numero ingresado es invalido')
+        print('La letras es unas consonate.')
 
 elif N==2:
-    n = int(input('ingrese un numero: '))
-    fa=1
-    while n>1:
-        fa*=n
-        n-=1
-    print(fa)
+    m = int(input('Ingrese los minutos que estuvo el carro en el estacionamiento: '))
+    v_t = m * 139
+    v_r = round((v_t - v_t * 0.19) / 50) * 50
+    print('El valor a pagar sin IVA es de:', v_r)
+    
 elif N==3:
-    n=int(input('ingrese un numero:'))
-    D=2
-    while D<n:
-        if n%D==0:
-            print('El numero no es primo')
-            break
+    a = int(input('Ingrese la longitud del primer lado: '))
+    b = int(input('Ingrese la longitud del segundo lado: '))
+    c = int(input('Ingrese la longitud del tercer lado: '))
+    if a + b > c and a + c > b and b + c > a:
+        if a == b == c:
+            print('El triángulo es Equilátero.')
+        elif a == b or a == c or b == c:
+            print('El triángulo es Isósceles.')
         else:
-            print('El es un numero primo')
-            break
-    print('los numero primos hasta ',n,'son: ')
-    if n>0:
-        for i in range(1,n):
-            B=2
-            sp=True
-            while (sp) and B<i:
-                if i%B==0:
-                    sp=False
-                else:
-                    B+=1
-            if sp:
-                print(i)
+            print('El triángulo es Escaleno.')
+    else:
+        print('No se puede formar un triángulo.')
+
 
 else:
   print('El numero ingresado no es valido.')
