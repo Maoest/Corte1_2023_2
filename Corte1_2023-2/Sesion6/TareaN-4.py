@@ -11,7 +11,7 @@ if N == 1:
             if c==0 :
                 n += str(f'{i} ')
             i+=1
-        print('Los numeros primmos de ese numero son:',n)
+        print('Los numeros primos de ese numero son:',n)
 
     elif a==0:
         print('Ningun numero es divisible entre cero.')
