@@ -1,4 +1,4 @@
-def org_min_may():
+def orear_lista():
     L=[]
     a=0
     while a>=0:
