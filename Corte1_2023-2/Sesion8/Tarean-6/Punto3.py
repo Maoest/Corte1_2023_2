@@ -1,4 +1,4 @@
-def orear_lista():
+def crear_lista():
     L=[]
     a=0
     while a>=0:
@@ -19,7 +19,7 @@ def eliminacion_duplicados(L):
     print(L)
 
 def main():
-    L=org_min_may()
+    L=crear_lista()
     print(L)
     eliminacion_duplicados(L)
 
