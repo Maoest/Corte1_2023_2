@@ -5,21 +5,21 @@ def obtener_divisores(numero):
             divisores.append(i)
     return divisores
 
-def es_numero_perfecto(numero):
+def numero_perfecto(numero):
     divisores = obtener_divisores(numero)
-    suma_divisores = sum(divisores)
-    return suma_divisores == numero
+    suma = sum(divisores)
+    return suma == numero
 
 def main():
-    cantidad_solicitada = int(input("Ingrese la cantidad de números perfectos que desea encontrar (máximo 10): "))
-    cantidad_encontrada = 0
-    numero_actual = 1
+    s = int(input("Ingrese la cantidad de números perfectos que desea encontrar (máximo 10): "))
+    cantidad = 0
+    numero = 1
 
-    while cantidad_encontrada < cantidad_solicitada:
-        if es_numero_perfecto(numero_actual):
-            print(f"Número perfecto encontrado: {numero_actual}")
-            cantidad_encontrada += 1
-        numero_actual += 1
+    while cantidad < s:
+        if numero_perfecto(numero):
+            print(f"Número perfecto encontrado: {numero}")
+            cantidad += 1
+        numero += 1
 
     print("Proceso completado.")
 
