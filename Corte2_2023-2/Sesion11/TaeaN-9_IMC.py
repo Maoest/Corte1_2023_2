@@ -41,7 +41,7 @@ def main():
             print('Invalido')
 
     for i in personas:
-        print(f'Nombre: {i.nombre} {i.apellido}\n'\
+        print(f'\nNombre: {i.nombre} {i.apellido}\n'\
               f'Altura: {i.altura}, Peso: {i.peso}\n'\
                  f'IMC: {i.imc()}')
 
