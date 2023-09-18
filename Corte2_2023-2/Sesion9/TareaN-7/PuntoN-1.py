@@ -19,7 +19,6 @@ def encontrar_alto_bajo(matriz):
     columna_a = 0
     fila_b = 0
     columna_b = 0
-
     for fila in range(len(matriz)):
         for columna in range(len(matriz[0])):
             if matriz[fila][columna] > alto:
