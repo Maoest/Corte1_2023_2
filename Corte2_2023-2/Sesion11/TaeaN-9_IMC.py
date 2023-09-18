@@ -7,15 +7,15 @@ class Persona:
 
     def imc(self):
         a = round(float(self.peso) / (float(self.altura) ** 2), 1)
-        if a < 18.5:
+        if a <= 18.5:
             categoria = 'Bajo'
-        elif 18.5 <= a < 24.9:
+        elif a <= 24.9:
             categoria = 'Saludable'
-        elif 25 <= a < 29.9:
+        elif a <= 29.9:
             categoria = 'Sobrepeso'
-        elif 30 <= a < 34.9:
+        elif a <= 34.9:
             categoria = 'Obesidad I'
-        elif 35 <= a < 39.9:
+        elif a <= 39.9:
             categoria = 'Obesidad II'
         else:
             categoria = 'Obesidad III'
