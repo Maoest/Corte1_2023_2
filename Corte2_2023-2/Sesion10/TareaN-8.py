@@ -9,8 +9,8 @@ def calcular_valor_neto(valor_ne, iva):
     if iva > 0:
         valor_sin_iva = valor_ne / (1 + iva)
         valor_iva = valor_sin_iva * iva
-        valor_total = valor_ne
-        return valor_sin_iva, valor_iva, valor_total
+        total = valor_ne
+        return valor_sin_iva, valor_iva, total
     else:
         return valor_ne
 
@@ -33,10 +33,10 @@ def main():
 
             if iva > 0:
                 print(f'El IVA es de: {iva*100:.0f}%')
-                valor_sin_iva, valor_iva, valor_total = calcular_valor_neto(valor_ne, iva)
+                valor_sin_iva, valor_iva, total = calcular_valor_neto(valor_ne, iva)
                 print(f'El valor sin IVA es: {round(valor_sin_iva, 2)}')
                 print(f'El valor del IVA es: {round(valor_iva, 2)}')
-                print(f'El valor neto del producto es: {round(valor_total, 2)}')
+                print(f'El valor neto del producto es: {round(total, 2)}')
             else:
                 print(f'El producto no tiene IVA, el Valor a pagar es {valor_ne}')
         else:
