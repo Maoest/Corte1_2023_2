@@ -6,7 +6,7 @@ class Persona:
         self.peso = None
 
     def imc(self):
-        a = round(float(self.peso) / (float(self.altura) ** 2), 1)
+        a = round((self.peso / (self.altura/100) ** 2), 1)
         if a <= 18.5:
             categoria = 'Bajo'
         elif a <= 24.9:
@@ -31,7 +31,7 @@ def main():
         per = Persona()
         per.nombre = input('Nombre: ')
         per.apellido = input('Apellido: ')
-        per.altura = float(input('Altura (en metros): '))
+        per.altura = float(input('Altura (en cm): '))
         per.peso = float(input('Peso (en kilogramos): '))
         personas.append(per)
         opc = input('Desea salir? (y/n): ')
