@@ -1,0 +1,61 @@
+                            +-------------------+
+                            |    Ciudadano      |
+                            +-------------------+
+                            | -__nombre: str    |
+                            | -__cedula: int    |
+                            | -__edad: int      |
+                            +-------------------+
+                            | +set_nombre(n: str)|
+                            | +get_nombre(): str |
+                            | +set_cedula(c: int)|
+                            | +get_cedula(): int |
+                            | +set_edad(e: int)  |
+                            | +get_edad(): int   |
+                            | +mostrar(): str    |
+                            | +esMayorDeEdad(): str|
+                            | +infoDeLaPersona(): str|
+                            +-------------------+
+                                      |
+                                      ↑
++---------------------+               |
+|      Profesor       |------->------>|
++---------------------+               |
+| -materia: str        |              |
+| -titulo: str         |              ↑
++---------------------+               |
+| +setMateria(m: str)  |              |
+| +getMateria(): str   |              |
+| +setTitulo(t: str)   |              |
+| +getTitulo(): str    |              |
+| +darTarea(): str     |              |
+| +infoDeLaPersona(): str|            ↑
++---------------------+               |
+                                      |
++---------------------+               | 
+|     Entrenador      |------->------>|   
++---------------------+               |  
+| -deporte: str       |               | 
+| -equipo: str        |               |  
++---------------------+               ↑
+| +setDeporte(d: str)  |              |
+| +getDeporte(): str   |              |
+| +setEquipo(e: str)   |              |
+| +getEquipo(): str    |              |
+| +ganarPartido(): str |              |
+| +infoDeLaPersona(): str|            |
++---------------------+               ↑
+                                      |
+                                      |
++---------------+                     |
+|     Actor     |------------->------>|
++---------------+                      
+| -categoria: str|                    
+| -peliculas: int|                    
++---------------+                      
+| +setCategoria(c: str)|              
+| +getCategoria(): str |              
+| +setPeliculas(p: int)|              
+| +getPeliculas(): int |              
+| +actuar(): str       |              
+| +infoDeLaPersona(): str|            
++---------------+                     
