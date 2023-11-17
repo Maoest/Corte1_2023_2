@@ -2,6 +2,12 @@ class ConversorNumerico:
     def __init__(self, numero: int):
         self.numero = numero
 
+    def setNumero(self,numero):
+        self.__numero =numero
+    def getNumero(self):
+        return self.__numero
+
+
 class Decimal(ConversorNumerico):
     def __init__(self, numero: int):
         super().__init__(numero)
@@ -16,10 +22,10 @@ class Decimal(ConversorNumerico):
             a = a // b
         else:
             d.append(c)
-        return sum(d)
+        return d
 
     def decoHexa(self):
-        a = self.numero
+        a = int(self.numero)
         b = 16
         d = []
         while a >= b:
@@ -42,7 +48,7 @@ class Decimal(ConversorNumerico):
             a = a // b
         else:
             d.append(c)
-        return sum(d)
+        return d
 
 class Binario(ConversorNumerico):
     def __init__(self, numero):
@@ -94,7 +100,7 @@ class Hexadecimal(ConversorNumerico):
 
 def main():
     m = input('Que conversión desea realizar:\n a. Decimal a Binario\n b. Decimal a Hexadecimal\n c. Binario a Decimal\n d. Hexadecimal a Decimal\n')
-    n = int(input('Ingrese un número: '))
+    n = input('Ingrese un número: ')
     
     if m == 'a':
         decimal_instance = Decimal(n)
@@ -118,4 +124,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-# Solución Parcial completo,lo subo a la 1:20pm
